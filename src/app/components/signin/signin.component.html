@@ -1,0 +1,35 @@
+<!-- Calling GoogleAuth() Api from AuthService -->
+<div class="formGroup">
+    <button type="button" (click)="firebaseService.GoogleAuth()">
+      Iniciar sesión con Google
+    </button>
+    <div *ngIf="firebaseService.usuario">Bienvenido {{ firebaseService.usuario }}</div>
+</div>
+<br>
+<div class="authBlock">
+    <h3>Registrarse</h3>
+    <div class="formGroup">
+      <input type="text" class="formControl" placeholder="Username" #userEmail required>
+    </div>
+    <div class="formGroup">
+      <input type="password" class="formControl" placeholder="Password" #userPassword required>
+    </div>
+    <!-- Calling SignIn Api from AuthenticationService -->
+    <div class="formGroup">
+      <input type="button" class="btn btnPrimary" value="Registrarse" (click)="firebaseService.SignUp(userEmail.value, userPassword.value)">
+    </div>
+ </div>
+ <br>
+ <div class="authBlock">
+    <h3>Iniciar sesión</h3>
+    <div class="formGroup">
+      <input type="text" class="formControl" placeholder="Username" #email required>
+    </div>
+    <div class="formGroup">
+      <input type="password" class="formControl" placeholder="Password" #password required>
+    </div>
+    <!-- Calling SignIn Api from AuthenticationService -->
+    <div class="formGroup">
+      <input type="button" class="btn btnPrimary" value="Iniciar sesión" (click)="firebaseService.SignIn(email.value, password.value)">
+    </div>
+ </div>

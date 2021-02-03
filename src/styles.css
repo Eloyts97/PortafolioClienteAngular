@@ -1,0 +1,245 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --fondo: #f1f1f1; 
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    background: var(--fondo);
+    margin: 0;
+    position: relative;
+}
+h1 {
+    font-family: 'MuseoModerno', cursive;
+    border-bottom: 1px solid;
+    font-size: 30px;
+}
+.logo {
+    font-family: 'MuseoModerno', cursive;
+    font-size: 24px;
+    transition: color 400ms, transform 400ms;
+}
+/* Barra de navegación */
+header {
+    width: calc(100% - 20px);
+    background: #d40303;
+    padding: 20px 10px;
+    position: sticky;
+    display: block;
+    top: 0;
+    text-transform: uppercase;
+}
+header ul {
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    max-width: 1100px;
+}
+header ul li {
+    width: max-content;
+    max-width: calc(20% - 20px);
+    display: block;
+    margin: auto;
+}
+header ul a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: all 30ms;
+}
+header ul a:hover, header ul a.actived {
+    background: #bb0303;
+}
+header li.logo a:hover {
+    background: transparent;
+}
+/* Contenedor principal */
+#content {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 20px;
+    background: white;
+}
+/* Pié de página*/
+footer {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 10px 20px;
+    background: var(--fondo);
+}
+/* Sobre mi */
+article {
+    text-align: justify;
+}
+/* Crear proyecto */
+form p {
+    display: flex;
+    flex-direction: column;
+}
+
+form p label {
+    margin: 10px 0;
+}
+
+form p input {
+    width: 100%;
+    height: 20px;
+}
+
+form {
+    max-width: 400px;
+    width: 100%;
+}
+
+form p input[type="submit"] {
+    width: max-content;
+    max-width: 250px;
+    margin: auto;
+    padding: 10px;
+    background: #d40303;
+    color: white;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 25px;
+    height: auto;
+    cursor: pointer;
+    outline: none;
+}
+
+form p input[type="submit"]:hover {
+    background: #bb0303;
+}
+
+form p span {
+    margin: 5px 0;
+    color: red;
+    font-size: 14px;
+}
+
+form p input[disabled] {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.success {
+    padding: 10px;
+    background: #2f982f;
+    color: white;
+    max-width: 380px;
+    width: 100%;
+}
+
+.success a {
+    color: white;
+    font-weight: 900;
+}
+
+.failed {
+    padding: 10px;
+    background: red;
+    color: white;
+    max-width: 380px;
+    width: 100%;
+}
+
+/* Página de proyectos */
+.container {
+    width: 100%;
+}
+
+.container ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.container ul li {
+    width: 30%;
+    margin: 20px 1% auto 2%;
+}
+
+.pryecto {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.proyecto img {
+    max-height: 400px;
+}
+
+.proyecto-link {
+    text-decoration: none;
+    color: black;
+}
+
+/* Página detalles proyecto */
+
+a.button-edit {
+    background: aquamarine;
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+    margin: 30px;
+    cursor: pointer;
+}
+
+a.button-delete {
+    background: #d40303;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.pagina.proyecto {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pagina.proyecto h2 {
+    width: 100%;
+}
+
+.pagina.proyecto img {
+    max-height: 500px;
+}
+
+.pagina.proyecto .category {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.pagina.proyecto .year {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.pagina.proyecto .langs {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.pagina.proyecto div {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Owl Cariusel */
+
+.owl-carousel .owl-item img {
+    width: auto !important;
+}

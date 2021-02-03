@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Proyectos</h1>
+
+    <owl-carousel [options]="SlideOptions" [items]="projects" [carouselClasses]="['owl-theme', 'sliding']">
+        <div *ngFor="let project of projects">
+            <a [routerLink]="['/proyecto', project._id]" class="proyecto-link">
+                <div class="proyecto">
+                    <img src="{{url+'get-image/'+project.image}}" alt="{{project.description}}" *ngIf="project.image">
+                    <h2>{{project.name}}</h2>
+                    <p class="description">{{project.description}}</p>
+                </div>
+            </a>
+        </div>
+    </owl-carousel>
+</div>
